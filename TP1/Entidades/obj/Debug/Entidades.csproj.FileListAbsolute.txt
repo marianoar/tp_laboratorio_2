@@ -1,0 +1,6 @@
+C:\Users\compa\Desktop\UTN\00 PyL 2 2020\TP1\Entidades\bin\Debug\Entidades.dll
+C:\Users\compa\Desktop\UTN\00 PyL 2 2020\TP1\Entidades\bin\Debug\Entidades.pdb
+C:\Users\compa\Desktop\UTN\00 PyL 2 2020\TP1\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\compa\Desktop\UTN\00 PyL 2 2020\TP1\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\compa\Desktop\UTN\00 PyL 2 2020\TP1\Entidades\obj\Debug\Entidades.dll
+C:\Users\compa\Desktop\UTN\00 PyL 2 2020\TP1\Entidades\obj\Debug\Entidades.pdb
