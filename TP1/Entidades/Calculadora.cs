@@ -9,7 +9,7 @@ namespace Entidades
     public class Calculadora
     {
         /// <summary>
-        /// Realiza la operacion solicitada entre dos numeros
+        /// Realiza la operacion solicitada entre dos numeros, previo validar operador
         /// </summary>
         /// <param name="number1"></param>
         /// <param name="number2"></param>
@@ -35,7 +35,8 @@ namespace Entidades
             }
         }
         /// <summary>
-        /// Valida q el strign operador contenga una operacion matematica correcta
+        /// Valida q el strign operador contenga signo de operacion correcta,
+        /// que el operador recibido sea +, -, / o*. Caso contrario retornará +.
         /// </summary>
         /// <param name="operador">contiene signo de la operacion</param>
         /// <returns>retorna el operador valido o en su defecto +</returns>

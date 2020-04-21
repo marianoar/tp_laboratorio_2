@@ -23,8 +23,7 @@ namespace Entidades
         }
         public Numero (string strNumber)
         {
-            string aux;
-            aux = SetNumero(strNumber);
+           this.SetNumero=strNumber;
            
         }
         #endregion
@@ -36,12 +35,17 @@ namespace Entidades
         /// <returns></returns>
 
         // Lo hacemos como Metodo porque aun no vimos propiedades segun Eze en el Slack.
-        private string SetNumero(string strNumber) 
+        /// <summary>
+        /// Seteara el numero validado
+        /// </summary>
+        public string SetNumero
         {
-            numero = ValidarNumero(strNumber);
-            return "";
+            set
+            {
+                this.numero = ValidarNumero(value);
+            }
         }
-        
+
         /// <summary>
         /// Valida que el string recibido sea numerico y clo onvierto a double
         /// </summary>
