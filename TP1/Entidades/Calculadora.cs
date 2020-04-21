@@ -17,24 +17,22 @@ namespace Entidades
         /// <returns>doube con el resultado de la operacion</returns>
         public static double Operar(Numero number1, Numero number2, string operador)
         {
-            double result=0;
-            switch (operador)
+            operador = ValidarOperador(operador);
+            
+            if (operador == "-")
             {
-                case "+":
-                    result = number1 + number2;
-                    break;
-                case "-":
-                    result = number1 - number2;
-                    break;
-                case "*":
-                    result = number1 * number2;
-                    break;
-                case "/":
-                    result = number1 / number2;
-                    break;
+                return number1 - number2;
+            }else if(operador=="*")
+            {
+                return number1 * number2;
+            }else if (operador == "/")
+            {
+                return number1 / number2;
             }
-            return result;
-
+            else
+            {
+                return number1 + number2;
+            }
         }
         /// <summary>
         /// Valida q el strign operador contenga una operacion matematica correcta

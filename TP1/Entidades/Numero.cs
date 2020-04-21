@@ -140,7 +140,7 @@ namespace Entidades
         {
             if(n2.numero!= 0)
             {
-                return n1 / n2;
+                return n1.numero / n2.numero;
             }
             else
             {
