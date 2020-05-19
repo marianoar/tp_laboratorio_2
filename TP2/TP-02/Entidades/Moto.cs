@@ -8,6 +8,7 @@ namespace Entidades
 {
     public class Moto : Vehiculo
     {
+        // Constructor
         public Moto(EMarca marca, string chasis, ConsoleColor color):base(marca, chasis, color)
         {
         }
@@ -19,10 +20,13 @@ namespace Entidades
         {
             get
             {
-                return 0;
+                return ETamanio.Chico;
             }
         }
-
+        /// <summary>
+        /// Imprimo datos por pantalla del elemento, llamando al metodo en clase padre
+        /// </summary>
+        /// <returns></returns>
         public override sealed string Mostrar()
         {
             StringBuilder sb = new StringBuilder();

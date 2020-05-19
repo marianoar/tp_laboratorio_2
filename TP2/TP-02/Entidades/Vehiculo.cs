@@ -23,14 +23,15 @@ namespace Entidades
         EMarca marca;
         string chasis;
         ConsoleColor color;
-        // ETamanio tamanio; ?
-
+        
+        #region Constructor
         public Vehiculo(EMarca marca, string chasis, ConsoleColor color)
         {
             this.marca=marca;
             this.chasis = chasis;
             this.color = color;
         }
+        #endregion
         /// <summary>
         /// ReadOnly: Retornará el tamaño
         /// </summary>
@@ -47,7 +48,7 @@ namespace Entidades
             return (string)this; // muestro utilizando la sobrecarga explixita del string
         }
         /// <summary>
-        /// 
+        /// sobrecarga explicita de string
         /// </summary>
         /// <param name="p">object Vehiculo</param>
         public static explicit operator string(Vehiculo p)

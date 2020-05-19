@@ -60,16 +60,22 @@ namespace Entidades
                 switch (tipo)
                 {
                     case ETipo.Camioneta:
-                        if(v is Camioneta)
+                        if (v is Camioneta)
+                        {
                             sb.AppendLine(v.Mostrar());
+                        }
                         break;
                     case ETipo.Moto:
                         if (v is Moto)
-                        sb.AppendLine(v.Mostrar());
+                        {
+                            sb.AppendLine(v.Mostrar());
+                        }
                         break;
                     case ETipo.Automovil:
                         if (v is Automovil)
-                         sb.AppendLine(v.Mostrar());
+                        {
+                            sb.AppendLine(v.Mostrar());
+                        }
                         break;
                     default:
                         sb.AppendLine(v.Mostrar());
@@ -119,7 +125,6 @@ namespace Entidades
                     break;
                 }
             }
-
             return c;
         }
         #endregion
