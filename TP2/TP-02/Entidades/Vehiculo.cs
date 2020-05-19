@@ -45,7 +45,7 @@ namespace Entidades
         /// <returns></returns>
         public virtual string Mostrar()
         {
-            return (string)this; // muestro utilizando la sobrecarga explixita del string
+            return (string)this; // muestro utilizando la sobrecarga explicita del string
         }
         /// <summary>
         /// sobrecarga explicita de string
@@ -66,8 +66,8 @@ namespace Entidades
         /// <summary>
         /// Dos vehiculos son iguales si comparten el mismo chasis
         /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
+        /// <param name="v1">objet Vehiculo</param>
+        /// <param name="v2">objet Vehiculo</param>
         /// <returns></returns>
         public static bool operator ==(Vehiculo v1, Vehiculo v2)
         {
@@ -76,8 +76,8 @@ namespace Entidades
         /// <summary>
         /// Dos vehiculos son distintos si su chasis es distinto
         /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
+        /// <param name="v1">objet Vehiculo</param>
+        /// <param name="v2">objet Vehiculo</param>
         /// <returns></returns>
         public static bool operator !=(Vehiculo v1, Vehiculo v2)
         {

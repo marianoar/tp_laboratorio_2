@@ -12,7 +12,6 @@ namespace Entidades
         public Moto(EMarca marca, string chasis, ConsoleColor color):base(marca, chasis, color)
         {
         }
-
         /// <summary>
         /// Las motos son chicas
         /// </summary>

@@ -41,7 +41,6 @@ namespace Entidades
         #endregion
         
         #region "Métodos"
-
         /// <summary>
         /// Expone los datos del elemento y su lista (incluidas sus herencias)
         /// SOLO del tipo requerido
@@ -82,7 +81,6 @@ namespace Entidades
                         break;
                 }
             }
-
             return sb.ToString();
         }
         #endregion
@@ -113,16 +111,17 @@ namespace Entidades
         /// </summary>
         /// <param name="c">Objeto donde se quitará el elemento</param>
         /// <param name="p">Objeto a quitar</param>
-        /// <returns></returns>
+        /// <returns></returns> 
         public static Estacionamiento operator -(Estacionamiento c, Vehiculo p)
         {
-            //foreach (Vehiculo v in c.vehiculos) 
+            //foreach (Vehiculo v in c.vehiculos) Reemplazo el forech por el for para trabajar con la lista
             for (int i = 0; i < c.vehiculos.Count; i++)
-            { 
+                //foreach (Vehiculo v in c.vehiculos)
+                { 
                 if (c.vehiculos[i] == p)
                 {
-                    c.vehiculos.Remove(p);
-                    break;
+                    c.vehiculos.RemoveAt(i);
+                    break; 
                 }
             }
             return c;

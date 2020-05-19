@@ -31,7 +31,7 @@ namespace Entidades
 
             sb.AppendLine("CAMIONETA");
             sb.AppendLine(base.Mostrar());
-            sb.AppendFormat("TAMAÑO : {0}", this.Tamanio);
+            sb.AppendFormat("TAMAÑO : {0}", Tamanio);
             sb.AppendLine("");
             sb.AppendLine("---------------------");
 
