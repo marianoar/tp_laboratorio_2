@@ -25,6 +25,7 @@ namespace Archivos
                 StreamWriter sw = new StreamWriter(archivo, true);
 
                 sw.WriteLine(datos.ToString());
+                sw.Close();
 
                 return true;
             }

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Excepciones;
+using EntidadesAbstractas;
 using Archivos;
 
-namespace EntidadesAbstractas
+
+namespace Clases_instanciables
 {
    
     public class Universidad
@@ -101,7 +103,17 @@ Profesores, Alumnos y Jornadas.
         }
         public static bool operator==(Universidad g, Alumno a) 
         {
-            return g.alumnos.Contains(a);
+            for (int i = 0; i < g.alumnos.Count; i++)
+            {
+                if (g.Alumnos[i].Dni== a.Dni)
+                {
+                    return true;
+                }else
+                {
+                    continue;
+                }
+            }
+            return false;
         }
 
         public static bool operator!=(Universidad g, Profesor i)
@@ -195,7 +207,7 @@ Profesores, Alumnos y Jornadas.
             }
             else
             {
-                throw new AlumnoRepetidoException();
+               // throw new AlumnoRepetidoException("Alumno repetido");
             }
 
             return g;
@@ -207,6 +219,7 @@ Profesores, Alumnos y Jornadas.
             foreach (Jornada item in uni.Jornadas)
             {
                 sb.AppendLine(item.ToString());
+                sb.AppendLine("<----------------------------->");
             }
             return sb.ToString();
         }
@@ -218,8 +231,7 @@ Profesores, Alumnos y Jornadas.
         public static bool Guardar(Universidad uni)
         {
             try
-            {
-                
+            { 
                 Xml<Universidad> xml = new Xml<Universidad>();
                 string archivo = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Universidad.xml";
                 return xml.Guardar(archivo, uni);
@@ -228,6 +240,16 @@ Profesores, Alumnos y Jornadas.
             {
                 throw new ArchivosException(e);
             }
+        }
+
+        public static Universidad Leer()
+        {
+            Universidad uni;
+
+            Xml<Universidad> xmlReader = new Xml<Universidad>();
+            xmlReader.Leer(Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Universidad.xml", out uni);
+
+            return uni;
         }
 
     }

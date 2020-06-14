@@ -29,7 +29,7 @@ namespace EntidadesAbstractas
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(base.ToString());
-            sb.Append(legajo.ToString());
+            sb.AppendLine("LEGAJO NUMERO: " + this.Legajo);
             return sb.ToString();
         }
 
@@ -37,6 +37,7 @@ namespace EntidadesAbstractas
 
         public override bool Equals(object obj)
         {
+            //return (this == (Universitario)obj);
             return obj.GetType() == typeof(Universitario) && this == (Universitario)obj;
         }
 

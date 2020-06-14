@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EntidadesAbstractas;
 
-namespace EntidadesAbstractas
+namespace Clases_instanciables
 {
     public sealed class Alumno : Universitario
     {
@@ -35,9 +36,9 @@ namespace EntidadesAbstractas
         protected override string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(base.MostrarDatos());
-            sb.Append(estadoCuenta);
-            sb.Append(claseQueToma);
+            sb.AppendLine(base.MostrarDatos());
+            sb.AppendLine("Estado de Cuenta: "+estadoCuenta.ToString());
+            sb.AppendLine(this.ParticiparEnClase());
 
             return sb.ToString();
         }

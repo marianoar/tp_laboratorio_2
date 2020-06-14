@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 
 namespace EntidadesAbstractas
@@ -52,7 +53,12 @@ namespace EntidadesAbstractas
             set
             {
                 dni = ValidarDNI(nacionalidad, value);
-            }
+                if (dni == 0) 
+                {
+                    throw new DniInvalidoException();
+                }
+
+             }
         }
         public ENacionalidad Nacionalidad { get { return nacionalidad; } set { nacionalidad = value; } }
 
@@ -64,6 +70,7 @@ namespace EntidadesAbstractas
         } // corregir
         #endregion
 
+        # region Constructores
         public Persona()
         {
 
@@ -88,20 +95,25 @@ namespace EntidadesAbstractas
             StringToDNI = dni;
             this.nacionalidad = nacionalidad;
         }
+        #endregion
 
+        #region Metodos
         private int ValidarDNI(ENacionalidad nacionalidad, int dato)
         {
-            if ((nacionalidad == ENacionalidad.Argentino) && ((dato>1 && dato<89999999)))
+            
+            int dni = 0;
+            if (nacionalidad == ENacionalidad.Argentino && dato>1 && dato<89999999)
             {
-                return dato;
-            } else if ((nacionalidad == ENacionalidad.Extranjero) && ((dato > 90000000 && dato < 99999999)))
+                dni = dato;
+            } else if ((nacionalidad == (ENacionalidad)1) && (dato > 90000000 && dato < 99999999))
             {
-                return dato;
+                dni= dato;
             }
             else
             {
-                throw new NacionalidadInvalidaException();
+                //throw new NacionalidadInvalidaException ();
             }
+            return dni;
 
         }
 
@@ -109,7 +121,7 @@ namespace EntidadesAbstractas
         {
             if((dato.Length<=8) && (int.TryParse(dato, out int aux)))
             {
-                return aux;
+                return this.ValidarDNI(nacionalidad,aux);
             }
             else
             {
@@ -142,11 +154,12 @@ namespace EntidadesAbstractas
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(apellido);
-            sb.Append(nombre);
-            sb.Append(dni.ToString());
-            sb.Append(nacionalidad);
+            sb.Append("NOMBRE COMPLETO :"+apellido);
+            sb.AppendLine(", "+nombre);
+            //sb.Append(dni.ToString());
+            sb.AppendLine("NACIONALIDAD: "+nacionalidad.ToString());
             return sb.ToString();
         }
+        #endregion
     }
 }

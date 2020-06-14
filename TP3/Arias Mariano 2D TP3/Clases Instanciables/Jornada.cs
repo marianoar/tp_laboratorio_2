@@ -7,8 +7,9 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using Excepciones;
 using Archivos;
+using EntidadesAbstractas;
 
-namespace EntidadesAbstractas
+namespace Clases_instanciables
 {
     public class Jornada
     {
@@ -75,8 +76,8 @@ namespace EntidadesAbstractas
         {
             try
             {
-                string ruta = @".\TP3\Archivo.txt";
-
+                //string ruta =  ".\\Archivo.txt";
+                string ruta = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Archivo.txt";
                 Texto texto = new Texto();
 
                 texto.Guardar(ruta, jornada.ToString());
@@ -92,7 +93,8 @@ namespace EntidadesAbstractas
         {
             try
             {
-                string ruta = @".\TP3\Archivo.txt";
+                                //va al escritorio de la pc
+                string ruta = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Archivo.txt";
 
                 string lectura;
 
@@ -112,8 +114,10 @@ namespace EntidadesAbstractas
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine("Clase: "+clase.ToString());
-            sb.AppendLine("Profesor: "+this.Instructor.ToString());
+            sb.AppendLine("JORNADA: ");
+            sb.Append("CLASE DE: "+clase.ToString());
+            sb.AppendLine(" POR "+this.Instructor.ToString());
+            
             sb.AppendLine("Alumnos:");
             for (int i = 0; i < alumnos.Count; i++)
             {

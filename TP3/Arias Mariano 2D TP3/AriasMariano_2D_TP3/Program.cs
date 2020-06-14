@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Archivos;
 using EntidadesAbstractas;
-using AriasMariano_2D_TP3;
 using Excepciones;
+using Clases_instanciables;
 
 
 namespace AriasMariano_2D_TP3

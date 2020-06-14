@@ -8,7 +8,7 @@ namespace Excepciones
 {
     public class ArchivosException : Exception
     {
-        public ArchivosException(Exception innerException):base ("Excepcion", innerException)
+        public ArchivosException(Exception innerException):base ("Excepcion, No se ha guardado el archivo", innerException)
         {
 
         }

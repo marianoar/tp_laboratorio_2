@@ -4,8 +4,9 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using EntidadesAbstractas;
 
-namespace EntidadesAbstractas
+namespace Clases_instanciables
 {
     public class Profesor : Universitario
     {
@@ -60,6 +61,7 @@ namespace EntidadesAbstractas
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(base.MostrarDatos());
+            
              
             return sb.ToString();
         }
@@ -72,9 +74,10 @@ namespace EntidadesAbstractas
         protected override string ParticiparEnClase()
         {
             StringBuilder sb = new StringBuilder();
+            sb.AppendLine("CLASES DEL DIA: ");
 
             foreach (Universidad.EClases clases in this.clasesDelDia)
-            {
+            {            
                 sb.AppendLine(clases.ToString());
             }
             return sb.ToString();

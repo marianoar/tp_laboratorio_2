@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 using Excepciones;
+using System.IO;
+
 
 namespace Archivos
 {
@@ -13,22 +15,22 @@ namespace Archivos
     {
         public bool Guardar(string archivo, T datos)
         {
-            XmlTextWriter writer = new XmlTextWriter(archivo, Encoding.UTF8);
+            
             try
             {
-                XmlSerializer serializer;
-
-                serializer = new XmlSerializer(typeof(T));
+                XmlTextWriter writer = new XmlTextWriter(archivo, Encoding.UTF8);
+                XmlSerializer serializer = new XmlSerializer(typeof(T));    // ---<<< ACA falla
                 serializer.Serialize(writer, datos);
+               
+                writer.Close();
                 return true;
             }
-            catch (Exception ex)
+                catch (Exception ex)
             {
                 throw new ArchivosException(ex);
             }
             finally
             {
-                writer.Close();
             }
 
         }
