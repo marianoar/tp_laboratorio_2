@@ -32,3 +32,11 @@ C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\UnitT
 C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\UnitTestProject1\obj\Debug\UnitTest.csproj.CopyComplete
 C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\UnitTestProject1\obj\Debug\UnitTestProject1.dll
 C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\UnitTestProject1\bin\Debug\Archivos.dll
+C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\UnitTestProject1\bin\Debug\Clases Abstractas.dll
+C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\UnitTestProject1\bin\Debug\Clases Instanciables.dll
+C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\UnitTestProject1\bin\Debug\Excepciones.dll
+C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\UnitTestProject1\bin\Debug\Archivos.pdb
+C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\UnitTestProject1\bin\Debug\Clases Abstractas.pdb
+C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\UnitTestProject1\bin\Debug\Clases Instanciables.pdb
+C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\UnitTestProject1\bin\Debug\Excepciones.pdb

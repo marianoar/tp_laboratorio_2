@@ -46,3 +46,5 @@ C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\Arias
 C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\AriasMariano_2D_TP3\obj\Debug\AriasMariano_2D_TP3.csproj.CopyComplete
 C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\AriasMariano_2D_TP3\obj\Debug\AriasMariano_2D_TP3.exe
 C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\AriasMariano_2D_TP3\obj\Debug\AriasMariano_2D_TP3.pdb
+C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\AriasMariano_2D_TP3\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\compa\Desktop\UTN\00PyL\tp_laboratorio_2\TP3\Arias Mariano 2D TP3\AriasMariano_2D_TP3\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll

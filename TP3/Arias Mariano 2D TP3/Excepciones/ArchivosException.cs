@@ -12,5 +12,9 @@ namespace Excepciones
         {
 
         }
+        public ArchivosException() : base()
+        {
+
+        }
     }
 }

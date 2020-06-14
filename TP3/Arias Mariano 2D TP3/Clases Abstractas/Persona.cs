@@ -111,7 +111,7 @@ namespace EntidadesAbstractas
             }
             else
             {
-                //throw new NacionalidadInvalidaException ();
+                throw new NacionalidadInvalidaException ();
             }
             return dni;
 

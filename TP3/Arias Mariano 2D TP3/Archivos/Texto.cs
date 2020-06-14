@@ -6,8 +6,6 @@ using System.Threading.Tasks;
 using System.IO;
 using Excepciones;
 
-
-
 namespace Archivos
 {
     public class Texto : IArchivo<string>
