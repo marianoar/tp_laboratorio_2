@@ -1,0 +1,6 @@
+C:\Users\compa\Desktop\UTN\00PyL\TP3\Arias Mariano 2D TP3\Excepciones\bin\Debug\Excepciones.dll
+C:\Users\compa\Desktop\UTN\00PyL\TP3\Arias Mariano 2D TP3\Excepciones\bin\Debug\Excepciones.pdb
+C:\Users\compa\Desktop\UTN\00PyL\TP3\Arias Mariano 2D TP3\Excepciones\obj\Debug\Excepciones.csprojAssemblyReference.cache
+C:\Users\compa\Desktop\UTN\00PyL\TP3\Arias Mariano 2D TP3\Excepciones\obj\Debug\Excepciones.csproj.CoreCompileInputs.cache
+C:\Users\compa\Desktop\UTN\00PyL\TP3\Arias Mariano 2D TP3\Excepciones\obj\Debug\Excepciones.dll
+C:\Users\compa\Desktop\UTN\00PyL\TP3\Arias Mariano 2D TP3\Excepciones\obj\Debug\Excepciones.pdb
