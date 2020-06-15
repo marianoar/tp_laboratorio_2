@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using Excepciones;
 using EntidadesAbstractas;
 using Archivos;
-
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace Clases_instanciables
 {
-   
     public class Universidad
     {
         /* Atributos Alumnos (lista de inscriptos), Profesores (lista de quienes pueden dar clases) y Jornadas.
