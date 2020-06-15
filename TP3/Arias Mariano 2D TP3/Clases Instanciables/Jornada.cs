@@ -58,15 +58,20 @@ namespace Clases_instanciables
         }
         #endregion
 
+        #region Constructores
         public Jornada (Universidad.EClases clase, Profesor instructor) : this()
         {
             this.clase = clase;
             this.instructor = instructor;
         }
+        /// <summary>
+        ///  constructor privado, inicializa la lista alumnos
+        /// </summary>
         private Jornada()
         {
             alumnos = new List<Alumno>();
         }
+        #endregion
 
         /// <summary>
         /// Metodo estatico Guarda objeto Jornada en un archivo txt en el desktop de la pc
@@ -91,14 +96,14 @@ namespace Clases_instanciables
             }
         }
         /// <summary>
-        /// Metodo estatico Lee objeto Jornada en un archivo txt en el desktop de la pc
+        /// Metodo estatico Lee archivo txt en el desktop de la pc
         /// </summary>
         /// <returns></returns>
         public static string Leer()
         {
             try
             {
-                                //va al escritorio de la pc
+                                /*              voy al escritorio de la pc                        */
                 string ruta = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Archivo.txt";
 
                 string lectura;
@@ -133,6 +138,7 @@ namespace Clases_instanciables
             return sb.ToString();
         }
 
+        #region Sobrecarga operadores
         /// <summary>
         /// Una Jornada será igual a un Alumno si el mismo participa de la clase.
         /// </summary>
@@ -161,5 +167,6 @@ namespace Clases_instanciables
             }
             return j;    
         }
+        #endregion
     }
 }

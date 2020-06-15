@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
+using EntidadesAbstractas;
 using Excepciones;
 using System.IO;
 
@@ -24,7 +25,7 @@ namespace Archivos
             {
                 XmlTextWriter writer = new XmlTextWriter(archivo, Encoding.UTF8);
 
-                XmlSerializer serializer = new XmlSerializer(typeof(T));  // ---<<< ACA falla
+                XmlSerializer serializer = new XmlSerializer(typeof(T));  // ---<<< ACA FALLA 
                 
                // XmlSerializer serializer = new XmlSerializer(typeof(T)), "Clases_instanciables");   
                 serializer.Serialize(writer, datos);

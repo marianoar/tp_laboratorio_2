@@ -11,9 +11,9 @@ namespace Archivos
     public class Texto : IArchivo<string>
     {
         /// <summary>
-        /// 
+        /// Guardo el archio en la ruta
         /// </summary>
-        /// <param name="archivo"></param>
+        /// <param name="archivo">Constiene la ruta </param>
         /// <param name="datos"></param>
         /// <returns></returns>
         public bool Guardar(string archivo, string datos)
@@ -34,9 +34,9 @@ namespace Archivos
          
         }
         /// <summary>
-        /// 
+        /// Leo el archivo desde la ruta recibida como parametro
         /// </summary>
-        /// <param name="archivo"></param>
+        /// <param name="archivo">ruta del archivo</param>
         /// <param name="datos"></param>
         /// <returns></returns>
         public bool Leer(string archivo, out string datos)

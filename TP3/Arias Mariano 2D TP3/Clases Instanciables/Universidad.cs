@@ -11,6 +11,7 @@ using System.Xml.Serialization;
 
 namespace Clases_instanciables
 {
+  
     public class Universidad
     {
         /* Atributos Alumnos (lista de inscriptos), Profesores (lista de quienes pueden dar clases) y Jornadas.
@@ -30,6 +31,10 @@ namespace Clases_instanciables
            • Guardar de clase serializará los datos del Universidad en un XML, incluyendo todos los datos de sus
            Profesores, Alumnos y Jornadas.
            • Leer de clase retornará un Universidad con todos los datos previamente serializados.*/
+
+         /// <summary>
+         /// Enumerado con las clases posibles
+         /// </summary>
         public enum EClases
         {
             Programacion, Laboratorio, Legislacion, SPD
@@ -97,6 +102,8 @@ namespace Clases_instanciables
             jornada = new List<Jornada>();
         }
         #endregion
+
+       # region Sobrecarga de operadores
         /// <summary>
         /// Un Universidad será igual a un Alumno si el mismo está inscripto en él.
         /// </summary>
@@ -217,7 +224,14 @@ namespace Clases_instanciables
             }
             return g;
         }
+        #endregion
 
+        #region Metodos
+        /// <summary>
+        /// Metodo estatico que los datos
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <returns></returns>
         private static string MostrarDatos(Universidad uni)
         {
             StringBuilder sb = new StringBuilder();
@@ -228,11 +242,19 @@ namespace Clases_instanciables
             }
             return sb.ToString();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return MostrarDatos(this);
         }
+        /// <summary>
+        /// Metodo estatico Guarda objeto Universidad en un archivo xml en el desktop de la pc
+        /// </summary>
+        /// <param name="uni"></param>
+        /// <returns></returns>
         public static bool Guardar(Universidad uni)
         {
             try
@@ -246,7 +268,10 @@ namespace Clases_instanciables
                 throw new ArchivosException(e);
             }
         }
-
+        /// <summary>
+        /// Metodo estatico Lee archivo xml 
+        /// </summary>
+        /// <returns></returns>
         public static Universidad Leer()
         {
             Universidad uni;
@@ -256,5 +281,6 @@ namespace Clases_instanciables
 
             return uni;
         }
+        #endregion
     }
 }
