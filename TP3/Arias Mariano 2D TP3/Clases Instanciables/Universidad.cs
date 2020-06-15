@@ -207,7 +207,7 @@ Profesores, Alumnos y Jornadas.
             }
             else
             {
-               // throw new AlumnoRepetidoException("Alumno repetido");
+                //throw new AlumnoRepetidoException();
             }
 
             return g;

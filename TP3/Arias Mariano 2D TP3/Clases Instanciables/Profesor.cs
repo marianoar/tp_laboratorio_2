@@ -22,11 +22,8 @@ namespace Clases_instanciables
 
         private Queue<Universidad.EClases> clasesDelDia;
         private static Random random;
-        static Profesor()
-        {
-            random = new Random();
-        }
 
+        #region Propiedades
         public Queue<Universidad.EClases> ClasesDelDia
         {
             get
@@ -38,12 +35,17 @@ namespace Clases_instanciables
                 clasesDelDia = value;
             }
         }
+        #endregion
 
-        private void _randomClases()
+        #region Constructores
+        /// <summary>
+        /// Constructor estatico , inicializa random.
+        /// </summary>
+        static Profesor()
         {
-            clasesDelDia.Enqueue((Universidad.EClases)random.Next(0, 3));
-            clasesDelDia.Enqueue((Universidad.EClases)random.Next(0, 3));
+            random = new Random();
         }
+   
         //En el constructor de instancia se inicializará ClasesDelDia y se asignarán dos clases al azar al Profesor
         // mediante el método randomClases.Las dos clases pueden o no ser la misma.
         public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad):base(legajo:id, nombre, apellido, dni, nacionalidad)
@@ -51,18 +53,27 @@ namespace Clases_instanciables
             clasesDelDia = new Queue<Universidad.EClases>();
             _randomClases();
         }
-
+        /// <summary>
+        /// Constructor por defecto
+        /// </summary>
         public Profesor() : base()
         {
 
+        }
+        #endregion
+
+        #region Metodos
+        private void _randomClases()
+        {
+            clasesDelDia.Enqueue((Universidad.EClases)random.Next(0, 3));
+            clasesDelDia.Enqueue((Universidad.EClases)random.Next(0, 3));
         }
 
         protected override string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(base.MostrarDatos());
-            
-             
+            sb.AppendLine(this.ParticiparEnClase());
             return sb.ToString();
         }
 
@@ -83,7 +94,9 @@ namespace Clases_instanciables
             return sb.ToString();
             
         }
+        #endregion
 
+        #region Sobrecarga de operadores
         //• Un Profesor será igual a un EClase si da esa clase*/
         public static bool operator == (Profesor i, Universidad.EClases clase)
         {
@@ -94,5 +107,6 @@ namespace Clases_instanciables
         {
             return (!(i == clase));
         }
+        #endregion
     }
 }

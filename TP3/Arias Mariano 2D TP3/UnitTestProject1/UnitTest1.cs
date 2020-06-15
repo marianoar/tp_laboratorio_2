@@ -14,7 +14,7 @@ namespace UnitTest
         // prueba 
         public void TestInstanciarAlumno()
         {
-            Alumno alumno = new Alumno(1, "Mariano", "Arias", "27308016", 0, 0);
+            Alumno alumno = new Alumno(1, "Mariano", "Arias", "22222333", 0, 0);
             Assert.IsNotNull(alumno);
         }
 
@@ -23,10 +23,10 @@ namespace UnitTest
         [TestMethod]
         public void TestAtributosTipoColeccion()
         {
-            Universidad uni = new Universidad(); 
-            Alumno alumno = new Alumno(1, "Mariano", "Arias", "27308016", 0, 0);
-            uni.Alumnos.Add(alumno);
-            Assert.IsNotNull(uni);
+            Universidad universidad = new Universidad(); 
+            Alumno alumno = new Alumno(1, "Mariano", "Arias", "22222333", 0, 0);
+            universidad.Alumnos.Add(alumno);
+            Assert.IsNotNull(universidad.Alumnos);
         }
 
 
@@ -35,8 +35,8 @@ namespace UnitTest
         public void TestSinProfesorException()
         {
 
-            Profesor instructor = new Profesor(1, "Mariano", "Arias", "27308016", 0);
-            Alumno alumno = new Alumno(1, "Mariano", "Arias", "27308016", 0, 0);
+            Profesor instructor = new Profesor(1, "Mariano", "Arias", "22222333", 0);
+            Alumno alumno = new Alumno(1, "Mariano", "Arias", "22222333", 0, 0);
             Universidad universidad = new Universidad();
             universidad += instructor;
             universidad += alumno;

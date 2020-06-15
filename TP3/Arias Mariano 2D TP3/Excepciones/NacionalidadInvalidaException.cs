@@ -12,28 +12,14 @@ namespace Excepciones
         /// <summary>
         /// Mensaje error personalizado
         /// </summary>
-        public NacionalidadInvalidaException() : base ("La Nacionalidad no se condice con el nùmero de DNI")
+        public NacionalidadInvalidaException(string mensaje) : base ()
         {
 
         }
-        
 
-        /*
-        //string message = 
-        public NacionalidadInvalidaException() : base("La Nacionalidad no se condice con el nùmero de DNI")
+        public NacionalidadInvalidaException() : base("La nacionalidad no se condice con el número de DNI")
         {
 
         }
-        public NacionalidadInvalidaException(string message) : base(message)
-        {
-
-        }
-   */
-        /*
-             public NacionalidadInvalidaException(string Message)
-              : base(Message) { }
-             public NacionalidadInvalidaException()
-                 : this("La nacionalidad no se condice con el numero de DNI") { }
-     */
     }
 }
