@@ -85,12 +85,18 @@ Profesores, Alumnos y Jornadas.
             }
         }
         #endregion
+
+        #region Constructores
+        /// <summary>
+        /// Constructor sin parametros, inicializa las colecciones
+        /// </summary>
         public Universidad()
         {
             alumnos = new List<Alumno>();
             profesores = new List<Profesor>();
             jornada = new List<Jornada>();
         }
+        #endregion
         /// <summary>
         /// Un Universidad será igual a un Alumno si el mismo está inscripto en él.
         /// </summary>
@@ -105,7 +111,7 @@ Profesores, Alumnos y Jornadas.
         {
             for (int i = 0; i < g.alumnos.Count; i++)
             {
-                if (g.Alumnos[i].Dni== a.Dni)
+                if (g.Alumnos[i].Dni== a.Dni) // revisar, deberia funcionar sin llamar a propiedidad dni
                 {
                     return true;
                 }else
@@ -207,9 +213,10 @@ Profesores, Alumnos y Jornadas.
             }
             else
             {
+                /* Esta comentado porq No lanza la excepcion por consola e interrumpe la ejecucion */
+
                 //throw new AlumnoRepetidoException();
             }
-
             return g;
         }
 

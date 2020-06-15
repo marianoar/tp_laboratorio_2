@@ -48,13 +48,24 @@ namespace Clases_instanciables
             return "TOMA CLASE DE " + this.claseQueToma.ToString();
         }
 
-    
-        //Un Alumno será igual a un EClase si toma esa clase y su estado de cuenta no es Deudor.
+        /// <summary>
+        /// //Un Alumno será igual a un EClase si toma esa clase y su estado de cuenta no es Deudor.
+        /// </summary>
+        /// <param name="a">Alumnos </param>
+        /// <param name="clase">Enumerado clase</param>
+        /// <returns>true si son iguales</returns>
+
         public static bool operator ==(Alumno a, Universidad.EClases clase)
         {
             return ((a.estadoCuenta.ToString()!="Deudor") && (a.claseQueToma==clase));
         }
-        //Un Alumno será distinto a un EClase sólo si no toma esa clase*/
+        /// <summary>
+        /// //Un Alumno será distinto a un EClase sólo si no toma esa clase
+        /// </summary>
+        /// <param name="a"></param>
+        /// <param name="clase"></param>
+        /// <returns></returns>
+
         public static bool operator !=(Alumno a, Universidad.EClases clase)
         {
             return (!(a.claseQueToma == clase));

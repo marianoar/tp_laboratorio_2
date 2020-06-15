@@ -8,14 +8,12 @@ using System.Xml.Serialization;
 using Excepciones;
 using System.IO;
 
-
 namespace Archivos
 {
     public class Xml<T> : IArchivo<T>
     {
         public bool Guardar(string archivo, T datos)
         {
-            
             try
             {
                 XmlTextWriter writer = new XmlTextWriter(archivo, Encoding.UTF8);
@@ -25,14 +23,13 @@ namespace Archivos
                 writer.Close();
                 return true;
             }
-                catch (Exception ex)
+            catch (Exception ex)
             {
                 throw new ArchivosException(ex);
             }
             finally
             {
             }
-
         }
 
        public bool Leer(string archivo, out T datos)

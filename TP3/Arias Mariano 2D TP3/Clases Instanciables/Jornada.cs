@@ -68,7 +68,7 @@ namespace Clases_instanciables
             alumnos = new List<Alumno>();
         }
         /// <summary>
-        /// 
+        /// Metodo estatico Guarda objeto Jornada en un archivo txt en el desktop de la pc
         /// </summary>
         /// <param name="jornada"></param>
         /// <returns></returns>
@@ -89,6 +89,10 @@ namespace Clases_instanciables
                 throw new ArchivosException(ex);
             }
         }
+        /// <summary>
+        /// Metodo estatico Lee objeto Jornada en un archivo txt en el desktop de la pc
+        /// </summary>
+        /// <returns></returns>
         public static string Leer()
         {
             try
@@ -108,9 +112,11 @@ namespace Clases_instanciables
             {
                 throw new ArchivosException(ex);
             }
-
         }
-
+        /// <summary>
+        /// Override de ToString
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -127,7 +133,7 @@ namespace Clases_instanciables
         }
 
         /// <summary>
-        /// • Una Jornada será igual a un Alumno si el mismo participa de la clase.
+        /// Una Jornada será igual a un Alumno si el mismo participa de la clase.
         /// </summary>
         /// <param name="j"></param>
         /// <param name="a"></param>
@@ -142,7 +148,7 @@ namespace Clases_instanciables
             return (!(j == a));
         }
         /// <summary>
-        /// Agregar Alumnos a la clase por medio del operador +, validando que no estén previamente cargados.
+        /// Agrega Alumnos a la clase por medio del operador +, validando que no estén previamente cargados.
         /// </summary>
         /// <returns></returns>
         public static Jornada operator +(Jornada j, Alumno a)

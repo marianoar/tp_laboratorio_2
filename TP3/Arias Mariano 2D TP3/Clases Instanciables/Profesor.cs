@@ -10,7 +10,6 @@ namespace Clases_instanciables
 {
     public class Profesor : Universitario
     {
-
         /*  Atributos ClasesDelDia del tipo Cola y random del tipo Random y estático.
            • Sobrescribir el método MostrarDatos con todos los datos del profesor.
            • ParticiparEnClase retornará la cadena "CLASES DEL DÍA" junto al nombre de la clases que da.
@@ -97,7 +96,7 @@ namespace Clases_instanciables
         #endregion
 
         #region Sobrecarga de operadores
-        //• Un Profesor será igual a un EClase si da esa clase*/
+        //Un Profesor será igual a un EClase si da esa clase*/
         public static bool operator == (Profesor i, Universidad.EClases clase)
         {
             return i.clasesDelDia.Contains(clase);

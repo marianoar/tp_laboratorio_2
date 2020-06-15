@@ -57,7 +57,6 @@ namespace EntidadesAbstractas
                 {
                     throw new DniInvalidoException();
                 }
-
              }
         }
         public ENacionalidad Nacionalidad { get { return nacionalidad; } set { nacionalidad = value; } }
@@ -98,9 +97,14 @@ namespace EntidadesAbstractas
         #endregion
 
         #region Metodos
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nacionalidad"></param>
+        /// <param name="dato"></param>
+        /// <returns></returns>
         private int ValidarDNI(ENacionalidad nacionalidad, int dato)
-        {
-            
+        { 
             int dni = 0;
             if (nacionalidad == ENacionalidad.Argentino && dato>1 && dato<89999999)
             {
@@ -111,13 +115,18 @@ namespace EntidadesAbstractas
             }
             else
             {
-               
+               /* Esta comentado porq No hace la excepcion por consola e interrumpe la ejecucion */
+
               // throw new NacionalidadInvalidaException ();
             }
             return dni;
-
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="nacionalidad"></param>
+        /// <param name="dato"></param>
+        /// <returns></returns>
         private int ValidarDNI(ENacionalidad nacionalidad, string dato)
         {
             if((dato.Length<=8) && (int.TryParse(dato, out int aux)))
@@ -129,7 +138,11 @@ namespace EntidadesAbstractas
                 throw new DniInvalidoException();
             }
         }
-
+        /// <summary>
+        /// Valida que el string dato este compuesto por letras mediante char.IsLetter
+        /// </summary>
+        /// <param name="dato">dato que sera el atributo  nombre o apellido </param>
+        /// <returns>si no es valido retorna Empty</returns>
         private string ValidarNombreApellido (string dato)
         {
             int aux = 0;
@@ -138,7 +151,6 @@ namespace EntidadesAbstractas
                 if (!char.IsLetter(dato[i])){
                     aux++;
                 }
-
             }
             if (aux!=0)
             {
@@ -150,8 +162,10 @@ namespace EntidadesAbstractas
                 return dato;
             }
         }
-
-        
+        /// <summary>
+        /// Override de ToString 
+        /// </summary>
+        /// <returns>atributos apellido, nombre y nacionalidad como strings</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
