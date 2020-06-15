@@ -16,9 +16,9 @@ namespace Clases_instanciables
         • Un Alumno será igual a un EClase si toma esa clase y su estado de cuenta no es Deudor.
         • Un Alumno será distinto a un EClase sólo si no toma esa clase*/
 
-
         private Universidad.EClases claseQueToma;
         private EEstadoCuenta estadoCuenta;
+
 
         public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta) : this(id, nombre, apellido, dni, nacionalidad, claseQueToma)
         {

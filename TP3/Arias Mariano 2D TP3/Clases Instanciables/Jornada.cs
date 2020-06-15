@@ -67,6 +67,7 @@ namespace Clases_instanciables
         {
             alumnos = new List<Alumno>();
         }
+
         /// <summary>
         /// Metodo estatico Guarda objeto Jornada en un archivo txt en el desktop de la pc
         /// </summary>

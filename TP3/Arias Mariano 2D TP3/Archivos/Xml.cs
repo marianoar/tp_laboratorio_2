@@ -12,6 +12,12 @@ namespace Archivos
 {
     public class Xml<T> : IArchivo<T>
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="archivo">ruta</param>
+        /// <param name="datos"></param>
+        /// <returns></returns>
         public bool Guardar(string archivo, T datos)
         {
             try
@@ -31,7 +37,12 @@ namespace Archivos
             {
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="archivo">ruta </param>
+        /// <param name="datos"></param>
+        /// <returns></returns>
        public bool Leer(string archivo, out T datos)
         {
             XmlTextReader reader = new XmlTextReader(archivo);

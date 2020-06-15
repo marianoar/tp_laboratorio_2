@@ -14,22 +14,22 @@ namespace Clases_instanciables
     public class Universidad
     {
         /* Atributos Alumnos (lista de inscriptos), Profesores (lista de quienes pueden dar clases) y Jornadas.
-• Se accederá a una Jornada específica a través de un indexador.
-• Un Universidad será igual a un Alumno si el mismo está inscripto en él.
-• Un Universidad será igual a un Profesor si el mismo está dando clases en él.
-• Al agregar una clase a un Universidad se deberá generar y agregar una nueva Jornada indicando la
-clase, un Profesor que pueda darla (según su atributo ClasesDelDia) y la lista de alumnos que la
-toman (todos los que coincidan en su campo ClaseQueToma).
-• Se agregarán Alumnos y Profesores mediante el operador +, validando que no estén previamente
-cargados.• La igualación entre un Universidad y una Clase retornará el primer Profesor capaz de dar esa clase.
-Sino, lanzará la Excepción SinProfesorException. El distinto retornará el primer Profesor que no
-pueda dar la clase.
-• Si al querer agregar alumnos este ya figura en la lista, lanzar la excepción AlumnoRepetidoException.
-• MostrarDatos será privado y de clase. Los datos del Universidad se harán públicos mediante
-ToString.
-• Guardar de clase serializará los datos del Universidad en un XML, incluyendo todos los datos de sus
-Profesores, Alumnos y Jornadas.
-• Leer de clase retornará un Universidad con todos los datos previamente serializados.*/
+           • Se accederá a una Jornada específica a través de un indexador.
+           • Un Universidad será igual a un Alumno si el mismo está inscripto en él.
+           • Un Universidad será igual a un Profesor si el mismo está dando clases en él.
+           • Al agregar una clase a un Universidad se deberá generar y agregar una nueva Jornada indicando la
+           clase, un Profesor que pueda darla (según su atributo ClasesDelDia) y la lista de alumnos que la
+           toman (todos los que coincidan en su campo ClaseQueToma).
+           • Se agregarán Alumnos y Profesores mediante el operador +, validando que no estén previamente
+           cargados.• La igualación entre un Universidad y una Clase retornará el primer Profesor capaz de dar esa clase.
+           Sino, lanzará la Excepción SinProfesorException. El distinto retornará el primer Profesor que no
+           pueda dar la clase.
+           • Si al querer agregar alumnos este ya figura en la lista, lanzar la excepción AlumnoRepetidoException.
+           • MostrarDatos será privado y de clase. Los datos del Universidad se harán públicos mediante
+           ToString.
+           • Guardar de clase serializará los datos del Universidad en un XML, incluyendo todos los datos de sus
+           Profesores, Alumnos y Jornadas.
+           • Leer de clase retornará un Universidad con todos los datos previamente serializados.*/
         public enum EClases
         {
             Programacion, Laboratorio, Legislacion, SPD
@@ -111,7 +111,7 @@ Profesores, Alumnos y Jornadas.
         {
             for (int i = 0; i < g.alumnos.Count; i++)
             {
-                if (g.Alumnos[i].Dni== a.Dni) // revisar, deberia funcionar sin llamar a propiedidad dni
+                if (g.Alumnos[i].Dni== a.Dni) // revisar, deberia funcionar sin llamar a dni
                 {
                     return true;
                 }else
@@ -213,9 +213,7 @@ Profesores, Alumnos y Jornadas.
             }
             else
             {
-                /* Esta comentado porq No lanza la excepcion por consola e interrumpe la ejecucion */
-
-                //throw new AlumnoRepetidoException();
+                throw new AlumnoRepetidoException("Alumno repetido...");
             }
             return g;
         }
@@ -258,9 +256,5 @@ Profesores, Alumnos y Jornadas.
 
             return uni;
         }
-
     }
-    
-
-
 }

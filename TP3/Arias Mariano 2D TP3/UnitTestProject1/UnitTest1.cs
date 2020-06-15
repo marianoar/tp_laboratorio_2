@@ -10,6 +10,8 @@ namespace UnitTest
     [TestClass]
     public class UnitTest1
     {
+        //Generar al menos uno que valide se haya instanciado un atributo del tipo colección en alguna de las clases dadas.
+
         [TestMethod]
         // prueba 
         public void TestInstanciarAlumno()
@@ -18,15 +20,48 @@ namespace UnitTest
             Assert.IsNotNull(alumno);
         }
 
-        //Generar al menos uno que valide se haya instanciado un atributo del tipo colección en alguna de las clases dadas.
-        
+
         [TestMethod]
-        public void TestAtributosTipoColeccion()
+        public void TestValidarNombre()
+        {
+            Alumno alumno = new Alumno();
+            string apellido = "Arias123";
+            alumno.Apellido = apellido;
+            Assert.IsTrue(alumno.Apellido==String.Empty);
+        }
+        
+
+        [TestMethod]
+        public void TestAtributosTipoColeccionEnUniversidad()
         {
             Universidad universidad = new Universidad(); 
             Alumno alumno = new Alumno(1, "Mariano", "Arias", "22222333", 0, 0);
-            universidad.Alumnos.Add(alumno);
+            universidad+=alumno;
             Assert.IsNotNull(universidad.Alumnos);
+        }
+
+
+        [TestMethod]
+        public void TestAtributosTipoColeccionEnJornada()
+        {
+            Profesor p = new Profesor(1, "p", "c", "12345678", Persona.ENacionalidad.Argentino);
+            Jornada j = new Jornada(Universidad.EClases.Laboratorio, p);
+            Alumno alumno = new Alumno(1, "Mariano", "Arias", "22222333", 0, 0);
+            j += alumno;
+
+            Assert.IsNotNull(j.Alumnos);
+        }
+
+
+        [ExpectedException (typeof(AlumnoRepetidoException))]
+        [TestMethod]
+        public void TestAlumnoRepetidoException()
+        {
+            Universidad universidad = new Universidad();
+            Alumno alumno = new Alumno(1, "Mariano", "Arias", "22222333", 0, 0);
+            Alumno alumno2 = new Alumno(1, "Mariano", "Arias", "22222333", 0, 0);
+            universidad += alumno;
+            universidad += alumno2; 
         }
 
 
@@ -34,7 +69,6 @@ namespace UnitTest
         [ExpectedException(typeof(SinProfesorException))]
         public void TestSinProfesorException()
         {
-
             Profesor instructor = new Profesor(1, "Mariano", "Arias", "22222333", 0);
             Alumno alumno = new Alumno(1, "Mariano", "Arias", "22222333", 0, 0);
             Universidad universidad = new Universidad();
@@ -56,6 +90,5 @@ namespace UnitTest
             string archivo = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Universidad.xml";
             xml.Guardar(archivo, universidad);
         }
-
     }
 }

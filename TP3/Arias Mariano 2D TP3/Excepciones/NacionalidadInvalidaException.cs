@@ -8,16 +8,19 @@ namespace Excepciones
 {
     public class NacionalidadInvalidaException : Exception
     {
-      
         /// <summary>
-        /// Mensaje error personalizado
+        /// Constructor po defecto
         /// </summary>
-        public NacionalidadInvalidaException(string mensaje) : base ()
+        public NacionalidadInvalidaException() : base(" ")
         {
 
         }
 
-        public NacionalidadInvalidaException() : base("La nacionalidad no se condice con el número de DNI")
+        /// <summary>
+        /// Constructor mensaje personalizado
+        /// </summary>
+        /// <param name="message"></param>
+        public NacionalidadInvalidaException(string message) : base(message)
         {
 
         }
