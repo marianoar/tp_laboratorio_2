@@ -1,0 +1,13 @@
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\TP4_AriasMariano_2D\obj\Debug\TP4_AriasMariano_2D.csprojAssemblyReference.cache
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\TP4_AriasMariano_2D\obj\Debug\TP4_AriasMariano_2D.FrmPpal.resources
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\TP4_AriasMariano_2D\obj\Debug\TP4_AriasMariano_2D.Properties.Resources.resources
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\TP4_AriasMariano_2D\obj\Debug\TP4_AriasMariano_2D.csproj.GenerateResource.cache
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\TP4_AriasMariano_2D\obj\Debug\TP4_AriasMariano_2D.csproj.CoreCompileInputs.cache
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\TP4_AriasMariano_2D\bin\Debug\TP4_AriasMariano_2D.exe.config
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\TP4_AriasMariano_2D\bin\Debug\TP4_AriasMariano_2D.exe
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\TP4_AriasMariano_2D\bin\Debug\TP4_AriasMariano_2D.pdb
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\TP4_AriasMariano_2D\bin\Debug\Entidades.dll
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\TP4_AriasMariano_2D\bin\Debug\Entidades.pdb
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\TP4_AriasMariano_2D\obj\Debug\TP4_AriasMariano_2D.csproj.CopyComplete
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\TP4_AriasMariano_2D\obj\Debug\TP4_AriasMariano_2D.exe
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\TP4_AriasMariano_2D\obj\Debug\TP4_AriasMariano_2D.pdb

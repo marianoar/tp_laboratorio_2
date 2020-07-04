@@ -19,7 +19,15 @@ namespace Clases_instanciables
         private Universidad.EClases claseQueToma;
         private EEstadoCuenta estadoCuenta;
 
+        public Universidad.EClases ClaseQueToma
+        {
+            get { return claseQueToma; }
+        }
 
+        public EEstadoCuenta EstadoCuenta
+        {
+            get { return estadoCuenta; }
+        }
         public Alumno(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad, Universidad.EClases claseQueToma, EEstadoCuenta estadoCuenta) : this(id, nombre, apellido, dni, nacionalidad, claseQueToma)
         {
             this.estadoCuenta = estadoCuenta;

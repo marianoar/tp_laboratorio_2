@@ -11,7 +11,7 @@ using System.Xml.Serialization;
 
 namespace Clases_instanciables
 {
-  
+  [Serializable]
     public class Universidad
     {
         /* Atributos Alumnos (lista de inscriptos), Profesores (lista de quienes pueden dar clases) y Jornadas.
@@ -42,7 +42,7 @@ namespace Clases_instanciables
 
         private List<Alumno> alumnos;
         private List<Profesor> profesores;
-        private List<Jornada> jornada;
+        private List<Jornada> jornadas;
 
         #region Propiedades
         public List<Alumno> Alumnos
@@ -71,22 +71,22 @@ namespace Clases_instanciables
         {
             get
             {
-                return jornada;
+                return jornadas;
             }
             set
             {
-                jornada = value;
+                jornadas = value;
             }
         }
         public Jornada this[int i]
         {
             get
             {
-                return this.Jornadas[i];
+                return this.jornadas[i];
             }
             set
             {
-                this.Jornadas[i] = value;
+                this.jornadas[i] = value;
             }
         }
         #endregion
@@ -99,7 +99,7 @@ namespace Clases_instanciables
         {
             alumnos = new List<Alumno>();
             profesores = new List<Profesor>();
-            jornada = new List<Jornada>();
+            jornadas = new List<Jornada>();
         }
         #endregion
 
@@ -257,16 +257,20 @@ namespace Clases_instanciables
         /// <returns></returns>
         public static bool Guardar(Universidad uni)
         {
+            Xml<Universidad> xml = new Xml<Universidad>();
             try
-            { 
-                Xml<Universidad> xml = new Xml<Universidad>();
+            {
                 string archivo = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\Universidad.xml";
-                return xml.Guardar(archivo, uni);
+                xml.Guardar(archivo, uni);
             }
             catch (Exception e)
             {
                 throw new ArchivosException(e);
             }
+            finally
+            {
+            }
+            return true;
         }
         /// <summary>
         /// Metodo estatico Lee archivo xml 

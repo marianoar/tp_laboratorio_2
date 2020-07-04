@@ -1,0 +1,6 @@
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\Entidades\bin\Debug\Entidades.dll
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\Entidades\bin\Debug\Entidades.pdb
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\Entidades\obj\Debug\Entidades.dll
+C:\Users\compa\Desktop\UTN\00PyL\TP4\TP4_AriasMariano_2D\Entidades\obj\Debug\Entidades.pdb
